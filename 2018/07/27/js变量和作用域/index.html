@@ -5,19 +5,20 @@
   
 
   
-  <title>Hello World | 欢迎来到firewithwind的个人主页</title>
+  <title>js变量和作用域 | 欢迎来到firewithwind的个人主页</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="JavaScript没有块级作用域，只有全局作用域和函数作用域（es5）  没有用var声明的变量将会直接创建一个全局变量（非严格模式下）  用var和直接创建的全局变量是有区别的：  当声明一个全局变量时，实际上是定义了全局对象的一个属性，该对象是不可配置的，即该变量无法通过delete运算符删除。  直接赋值而自动创建的变量是可配置的，可以用delete运算符删除    函数内部有一个保存函">
+<meta name="keywords" content="Javascript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://firewithwind.github.io/2018/07/11/hello-world/index.html">
+<meta property="og:title" content="js变量和作用域">
+<meta property="og:url" content="https://firewithwind.github.io/2018/07/27/js变量和作用域/index.html">
 <meta property="og:site_name" content="欢迎来到firewithwind的个人主页">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="JavaScript没有块级作用域，只有全局作用域和函数作用域（es5）  没有用var声明的变量将会直接创建一个全局变量（非严格模式下）  用var和直接创建的全局变量是有区别的：  当声明一个全局变量时，实际上是定义了全局对象的一个属性，该对象是不可配置的，即该变量无法通过delete运算符删除。  直接赋值而自动创建的变量是可配置的，可以用delete运算符删除    函数内部有一个保存函">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2018-07-11T12:46:08.000Z">
+<meta property="og:updated_time" content="2018-07-27T02:23:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="js变量和作用域">
+<meta name="twitter:description" content="JavaScript没有块级作用域，只有全局作用域和函数作用域（es5）  没有用var声明的变量将会直接创建一个全局变量（非严格模式下）  用var和直接创建的全局变量是有区别的：  当声明一个全局变量时，实际上是定义了全局对象的一个属性，该对象是不可配置的，即该变量无法通过delete运算符删除。  直接赋值而自动创建的变量是可配置的，可以用delete运算符删除    函数内部有一个保存函">
   
     <link rel="alternate" href="/atom.xml" title="欢迎来到firewithwind的个人主页" type="application/atom+xml">
   
@@ -68,10 +69,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-js变量和作用域" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/07/11/hello-world/" class="article-date">
-  <time datetime="2018-07-11T12:29:03.000Z" itemprop="datePublished">2018-07-11</time>
+    <a href="/2018/07/27/js变量和作用域/" class="article-date">
+  <time datetime="2018-07-27T02:22:33.000Z" itemprop="datePublished">2018-07-27</time>
 </a>
     
   </div>
@@ -82,7 +83,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      js变量和作用域
     </h1>
   
 
@@ -90,37 +91,54 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <ul>
+<li><p>JavaScript没有块级作用域，只有全局作用域和函数作用域（es5）</p>
+</li>
+<li><p>没有用var声明的变量将会直接创建一个全局变量（非严格模式下）</p>
+</li>
+<li><p>用var和直接创建的全局变量是有区别的：</p>
+<ul>
+<li><p>当声明一个全局变量时，实际上是定义了全局对象的一个属性，该对象是不可配置的，即该变量无法通过delete运算符删除。</p>
+</li>
+<li><p>直接赋值而自动创建的变量是可配置的，可以用delete运算符删除</p>
+</li>
+</ul>
+</li>
+<li><p>函数内部有一个保存函数内部可用的局部变量的对象，作用域链也是对象链，对象链的创建规则：</p>
+<ul>
+<li>当定义一个函数时，它实际保存一条作用域链。当调用这个函数时，它会创建一个新的对象，并将该对象保存到那条作用域链上，同时保存新的更长的表示函数调用作用域的链。</li>
+</ul>
+</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://firewithwind.github.io/2018/07/11/hello-world/" data-id="cjk3dgzly00038qci2jew7gay" class="article-share-link">Share</a>
+      <a data-url="https://firewithwind.github.io/2018/07/27/js变量和作用域/" data-id="cjk3dgzlz00048qciwvu98l1e" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2018/07/12/ECMAScript-2016-2017/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/07/27/浏览器和屏幕/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          ECMAScript 2016-2017
+          浏览器和屏幕
         
       </div>
     </a>
   
+  
+    <a href="/2018/07/27/Git概念概括/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Git概念概括</div>
+    </a>
   
 </nav>
 
