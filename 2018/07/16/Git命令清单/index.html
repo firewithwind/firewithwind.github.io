@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="欢迎来到firewithwind的个人主页">
 <meta property="og:description" content="新建代码库 git init          # 在当前目录创建一个git代码库 git init [project_name]          # 新建一个目录，并将其初始化为git代码库 git clone [url]         # 从远程仓库克隆一个代码库和他的代码历史  配置git的配置信息在.gitconfig，如果在主目录下为全局匹配，如果在项目目录下为项目配置  git c">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2018-11-05T07:35:51.747Z">
+<meta property="og:updated_time" content="2018-12-06T03:31:45.598Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git命令清单">
 <meta name="twitter:description" content="新建代码库 git init          # 在当前目录创建一个git代码库 git init [project_name]          # 新建一个目录，并将其初始化为git代码库 git clone [url]         # 从远程仓库克隆一个代码库和他的代码历史  配置git的配置信息在.gitconfig，如果在主目录下为全局匹配，如果在项目目录下为项目配置  git c">
@@ -168,6 +168,9 @@
 <li>git show –name-only [commit]      # 显示某次提交变化的文件</li>
 <li>git show [commit]:[filename]         # 显示某次提交时，某个文件的内容</li>
 <li>git reflog         # 显示当前分支的最近几次提交</li>
+<li>git log –format=’%aN’ | sort -u | while read name; do echo -en “$name\t”; git log –author=”$name” –pretty=tformat: –numstat | awk ‘{ add += $1; subs += $2; loc += $1 - $2 } END { printf “added lines: %s, removed lines: %s, total lines: %s\n”, add, subs, loc }’ -; done         # 显示当前项目的开发者代码代码变更汇总</li>
+<li>git log –pretty=’%aN’ | sort -u | wc -l         # 显示当前项目的贡献者数量</li>
+<li>find . -name “<em>.m” -or -name “</em>.h” -or -name “<em>.xib” -or -name “</em>.c” |xargs grep -v “^$”|wc -l         # 显示当前项目的代码行数</li>
 </ul>
 <h3 id="远程同步"><a href="#远程同步" class="headerlink" title="远程同步"></a>远程同步</h3><ul>
 <li>git fetch [remote]     #下载远程仓库的所有变动</li>
@@ -196,7 +199,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://firewithwind.github.io/2018/07/16/Git命令清单/" data-id="cjl506q9i00016dciaj939yeb" class="article-share-link">Share</a>
+      <a data-url="https://firewithwind.github.io/2018/07/16/Git命令清单/" data-id="cjpc1z3f60001ifci4dk74u24" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
