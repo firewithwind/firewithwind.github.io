@@ -66,6 +66,57 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-vscode使用总结" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/01/07/vscode使用总结/" class="article-date">
+  <time datetime="2019-01-07T06:27:28.000Z" itemprop="datePublished">2019-01-07</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/01/07/vscode使用总结/">vscode使用总结</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>以Q&amp;A的形式，记录自己在使用vscode的过程中遇到的问题，以及记录自己对问题出现的理解和解决方案</strong></p>
+<hr>
+<p>Q1、更换vscode默认的bash</p>
+<p>A1: 可以通过”command+,”调出设置菜单，在里面找到terminal.integrated.shell对应的配置项，根据自己的操作系统类型配置对应的项</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"terminal.integrated.shell.linux": "/bin/bash",</span><br><span class="line">"terminal.integrated.shell.osx": "/bin/bash",</span><br><span class="line">"terminal.integrated.shell.windows": "cmd.exe",</span><br></pre></td></tr></table></figure>
+<hr>
+<p>Q2、vscode默认使用的path与系统不一致，导致很多全局命令使用的版本跟用户配置不一样</p>
+<p>A2: 设置terminal.integrated.env对应的配置项，添加路径的补充</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"terminal.integrated.env.osx": &#123;</span><br><span class="line">    "PATH": "$PATH:$HOME/bin"</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>遇到的问题是使用vscode时发现内部中断的node与npm版本与外部终端不一致</p>
+<hr>
+<p>Q3、使用background扩展后，卸载扩展，背景图片依然存在</p>
+<p>A3: 在卸载前或者中心安装background,然后在用户配置中设置Background.Enabled为false，然后再卸载</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://firewithwind.github.io/2019/01/07/vscode使用总结/" data-id="cjqlyuoap0000i8cirafkm753" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VsCode/">VsCode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-a标签target属性" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/08/22/a标签target属性/" class="article-date">
@@ -1920,7 +1971,7 @@ k2AxEcXhaHLON7Pmm9009HJrZsKKKK7z7YKKKKAP/9k="></p>
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Javascript/">Javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/VsCode/">VsCode</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/html/">html</a></li></ul>
     </div>
   </div>
 
@@ -1930,7 +1981,7 @@ k2AxEcXhaHLON7Pmm9009HJrZsKKKK7z7YKKKKAP/9k="></p>
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/tags/html/" style="font-size: 10px;">html</a>
+      <a href="/tags/Git/" style="font-size: 15px;">Git</a> <a href="/tags/Javascript/" style="font-size: 20px;">Javascript</a> <a href="/tags/VsCode/" style="font-size: 10px;">VsCode</a> <a href="/tags/html/" style="font-size: 10px;">html</a>
     </div>
   </div>
 
@@ -1939,7 +1990,7 @@ k2AxEcXhaHLON7Pmm9009HJrZsKKKK7z7YKKKKAP/9k="></p>
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/01/">January 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">August 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">July 2018</a></li></ul>
     </div>
   </div>
 
@@ -1950,6 +2001,10 @@ k2AxEcXhaHLON7Pmm9009HJrZsKKKK7z7YKKKKAP/9k="></p>
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2019/01/07/vscode使用总结/">vscode使用总结</a>
+          </li>
         
           <li>
             <a href="/2018/08/22/a标签target属性/">a标签target属性</a>
@@ -1965,10 +2020,6 @@ k2AxEcXhaHLON7Pmm9009HJrZsKKKK7z7YKKKKAP/9k="></p>
         
           <li>
             <a href="/2018/07/27/Git概念概括/">Git概念概括</a>
-          </li>
-        
-          <li>
-            <a href="/2018/07/16/Git命令清单/">Git命令清单</a>
           </li>
         
       </ul>
